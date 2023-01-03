@@ -48,27 +48,51 @@ const HeroSubtitle = styled.p`
 
 export const HeroSection = () => {
   const el = useRef(null);
+  const typedRef = useRef(null);
 
   useEffect(() => {
-    const typed = new Typed(
+    typedRef.current = new Typed(
       el.current, {
         strings:  [
-          'Developer',
-          'Medical Simulation Technician',
-          'Sound Designer',
-          'Composer',
-          'Musician'
+          'I am a Software Developer',
+          'I am a Software Developer in Test',
+          'I am a Medical Simulation Technician',
+          'I am a Sound Designer',
+          'I am a Composer',
+          'I am a Musician',
+          'I am an Armchair Game Designer',
+          'I am an Armchair Historian',
+          'I am a Shadetree Mechanic',
+          'I am a Computer Programmer',
+          'I am Test-Driven',
+          'I am Behavior-Driven',
+          'I am Solution-Focused',
+          'I love writing Unit Tests',
+          'I love writing Integration Tests',
+          'I love Updating Dependencies',
+          'I think I\'m funny',
+          'I am a Geek',
+          'I am a Nerd',
+          'I love Research and Development',
+          'I am a Power User',
+          'I am a Gearhead',
+          'I am hard on my stuff',
+          'I give great hugs',
+          'I love coffee',
+          'I am a morning person... sometimes',
+          'I am more than the sum of my parts'
         ],
         loop: true,
         startDelay: 300,
         typeSpeed: 100,
         backSpeed: 50,
-        backDelay: 500,
-        smartBackspace: true
+        backDelay: 600,
+        smartBackspace: false,
+        shuffle: true
       });
 
       return () => {
-        typed.destroy();
+        typedRef.current.destroy();
       };
   });
 
