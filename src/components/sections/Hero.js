@@ -63,7 +63,8 @@ export const HeroSection = () => {
         startDelay: 300,
         typeSpeed: 100,
         backSpeed: 50,
-        backDelay: 500
+        backDelay: 500,
+        smartBackspace: true
       });
 
       return () => {

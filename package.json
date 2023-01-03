@@ -1,7 +1,7 @@
 {
   "name": "mx-portfolio",
   "version": "0.1.0",
-  "homepage": "https://matneyx.github.io/portfolio",
+  "homepage": "https://matneyx.github.io/",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
