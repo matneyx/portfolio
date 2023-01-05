@@ -1,3 +1,7 @@
+> This template is being included in this repo for easy linking and code comparison.
+> I did not write a single line of code in this branch.
+> -Dave Matney
+
 Thanks for downloading this template!
 
 Template Name: DevFolio
