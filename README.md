@@ -1,5 +1,5 @@
 # About This Site
-![badge](https://gist.githubusercontent.com/matneyx/9971936c552d17eb9f2141f03733c586/raw/d2386d0ae875a8db811d09cd274712f4035fffec/mx-io-test.json)
+![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/matneyx/9971936c552d17eb9f2141f03733c586/raw/d2386d0ae875a8db811d09cd274712f4035fffec/mx-io-test.json)
 
 ## Notable technologies used
  - [Bootstrap](https://getbootstrap.com/)
