@@ -1,7 +1,7 @@
 # About This Site
 
 ## Source and Inspiration
-This site was adapted and converted from [Bootstrapmade.com's DevFolio Bootstrap Portfolio HTML Template](https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/).  For legal reasons, I am not including the paid version of the template's source code here, but the free version available on that site should give you a good idea of what I started with.
+This site was adapted and converted from [Bootstrapmade.com's DevFolio Bootstrap Portfolio HTML Template](https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/).  I have included a copy of the free version of the template -- accurate to the day I started this conversion -- [as the BootstrapMade-DevFolio-Free-Template branch](https://github.com/matneyx/matneyx.github.io/tree/BootstrapMade-DevFolio-Free-Template). There are comments throughout my conversion with URLs to the exact sections of related code for easier comparison.
 
 ## Notable technologies used
  - [Bootstrap](https://getbootstrap.com/)
