@@ -47,12 +47,12 @@ const HeroSubtitle = styled.p`
 `;
 
 export const HeroSection = () => {
-  const el = useRef(null);
+  const heroSubtitleRef = useRef(null);
   const typedRef = useRef(null);
 
   useEffect(() => {
     typedRef.current = new Typed(
-      el.current, {
+      heroSubtitleRef.current, {
         strings:  [
           'I am a Software Developer',
           'I am a Software Developer in Test',
@@ -103,7 +103,7 @@ export const HeroSection = () => {
         <TableCell>
           <Container>
             <HeroTitle className="mb-4">I am Dave Matney</HeroTitle>
-            <HeroSubtitle><span className="typed" ref={el}></span></HeroSubtitle>
+            <HeroSubtitle><span className="typed" ref={heroSubtitleRef}></span></HeroSubtitle>
           </Container>
         </TableCell>
       </HeroContent>
