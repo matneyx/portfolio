@@ -5,6 +5,10 @@ import {
 import styled from 'styled-components';
 import { NavBar } from './NavBar';
 
+/**
+ * Adapted from: https://github.com/matneyx/matneyx.github.io/blob/BootstrapMade-DevFolio-Free-Template/assets/css/style.css#L460
+ */
+
 const StyledHeader = styled.header`
   transition: all 0.5s;
   z-index: 997;
@@ -35,6 +39,10 @@ const Logo = styled.h1`
 export const Header = () => {
   const headerRef = useRef(null);
   useEffect(()=> {
+    /**
+     * Adapted from: https://github.com/matneyx/matneyx.github.io/blob/BootstrapMade-DevFolio-Free-Template/assets/js/main.js#L82
+     */
+
      if (headerRef.current) {
        const headerScrolled = () => {
          if (window.scrollY > 100) {
@@ -53,6 +61,9 @@ export const Header = () => {
      }
   });
 
+  /**
+   * Adapted from: https://github.com/matneyx/matneyx.github.io/blob/BootstrapMade-DevFolio-Free-Template/index.html#L35
+   */
   return (<StyledHeader ref={headerRef} className="fixed-top">
     <Container className='d-flex align-items-center justify-content-between'>
       <Logo className="logo"><a href='index.html'>Dave Matney</a></Logo>
