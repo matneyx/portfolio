@@ -5,9 +5,8 @@ name: Run Jest and generate coverage
 
 on:
   push:
-  # pull_request:
-  #   branches:
-  #     - master
+    branches:
+      - master
 
 jobs:
   run-jest-and-generate-coverage:
