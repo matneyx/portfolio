@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { BsChevronDown, BsList, BsX } from 'react-icons/bs'
 
-export const ChevronDown = (props) => <i data-testid="chevron-down" className="bi bi-chevron-down" {...props}></i>;
+export const ChevronDown = (props) => <BsChevronDown data-testid="chevron-down" {...props}/>;
 
 export const MobileNavToggle = React.forwardRef(({onClick, ...props}, ref) => {
   const [hasBeenToggled, setHasBeenToggled] = useState(false);
@@ -10,11 +11,13 @@ export const MobileNavToggle = React.forwardRef(({onClick, ...props}, ref) => {
     onClick(e);
   }
 
-  return (<i
-    data-testid="mobile-nav-toggle"
+  const IconToUse = hasBeenToggled ? BsX : BsList;
+
+  return (<IconToUse
+    data-testid='mobile-nav-toggle'
     ref={ref}
-    className={`bi ${hasBeenToggled ? 'bi-x' : 'bi-list'} mobile-nav-toggle`}
+    className='mobile-nav-toggle'
     onClick={handleClick}
-    {...props}></i>
+    {...props} />
   );
 });
