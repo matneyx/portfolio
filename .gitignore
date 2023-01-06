@@ -10,6 +10,7 @@
 jest-junit-results.xml
 junit.xml
 lcov.info
+/cypress/videos
 
 # production
 /build
