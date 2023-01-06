@@ -38,7 +38,7 @@ jobs:
         test_format: JUNIT
         test_framework: JEST
         test_path: <test_results_path_optional>
-        coverage_format: TXT
+        coverage_format: LCOV/TXT
         coverage_path: <coverage_results_path_optional>
 
     - name: Generating coverage badges
