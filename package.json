@@ -27,7 +27,7 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --coverage",
+    "test": "react-scripts test",
     "test-and-cover": "jest --coverage  --ci",
     "eject": "react-scripts eject"
   },

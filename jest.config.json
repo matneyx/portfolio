@@ -7,5 +7,6 @@
     "default",
     ["jest-junit", { "outputName": "jest-junit-results.xml"}]
   ],
+  "collectCoverage": true,
   "coverageReporters": ["json-summary", "lcov"]
 }

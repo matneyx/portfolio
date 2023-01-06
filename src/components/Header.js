@@ -43,22 +43,20 @@ export const Header = () => {
      * Adapted from: https://github.com/matneyx/matneyx.github.io/blob/BootstrapMade-DevFolio-Free-Template/assets/js/main.js#L82
      */
 
-     if (headerRef.current) {
-       const headerScrolled = () => {
-         if (window.scrollY > 100) {
-          headerRef.current.classList.add('header-scrolled')
-         } else {
-          headerRef.current.classList.remove('header-scrolled')
-         }
+     const headerScrolled = () => {
+       if (window.scrollY > 100) {
+         headerRef.current.classList.add('header-scrolled')
+       } else {
+         headerRef.current.classList.remove('header-scrolled')
        }
-       window.addEventListener('load', headerScrolled)
-       window.addEventListener('scroll', headerScrolled);
-
-       return(()=>{
-         window.removeEventListener('load', headerScrolled)
-         window.removeEventListener('scroll', headerScrolled);
-       })
      }
+     window.addEventListener('load', headerScrolled)
+     window.addEventListener('scroll', headerScrolled);
+
+     return (() => {
+       window.removeEventListener('load', headerScrolled)
+       window.removeEventListener('scroll', headerScrolled);
+     })
   });
 
   /**
