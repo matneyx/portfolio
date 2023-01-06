@@ -30,7 +30,10 @@
     "test": "react-scripts test",
     "test-and-cover": "jest --coverage  --ci",
     "eject": "react-scripts eject",
-    "stryker": "stryker run"
+    "stryker": "stryker run",
+    "cypress": "cypress open",
+    "cypress-run" : "cypress run",
+    "cypress-start-and-test" : "start-server-and-test start http://localhost:3000 cypress-run"
   },
   "eslintConfig": {
     "extends": [
@@ -51,10 +54,14 @@
     ]
   },
   "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
+    "@cypress/webpack-preprocessor": "^5.16.1",
     "@stryker-mutator/core": "^6.3.1",
     "@stryker-mutator/jest-runner": "^6.3.1",
+    "cypress": "^12.3.0",
     "gh-pages": "^4.0.0",
     "identity-obj-proxy": "^3.0.0",
+    "start-server-and-test": "^1.15.2",
     "stryker-babel-transpiler": "^0.10.1"
   },
   "resolutions": {

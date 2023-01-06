@@ -102,7 +102,7 @@ export const HeroSection = () => {
       <HeroContent>
         <TableCell>
           <Container>
-            <HeroTitle className="mb-4">I am Dave Matney</HeroTitle>
+            <HeroTitle data-testid="hero-title" className="mb-4">I am Dave Matney</HeroTitle>
             <HeroSubtitle><span className="typed" ref={heroSubtitleRef}></span></HeroSubtitle>
           </Container>
         </TableCell>
