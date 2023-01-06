@@ -5,12 +5,6 @@ name: Run Jest and generate coverage
 
 on:
   push:
-    paths-ignore:
-      - '**/*.md'
-      - '**/*.yml'
-      - '.github/**'
-      - 'data/**'
-      - 'dist/**'
   # pull_request:
   #   branches:
   #     - master
