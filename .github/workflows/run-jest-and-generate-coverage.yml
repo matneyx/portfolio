@@ -13,6 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # Make sure you put workflow kit action on top of all the steps
+    - name: Collect Workflow Telemetry
+      uses: runforesight/foresight-workflow-kit-action@v1
+      if: ${{ always() }}
+      with:
+        api_key: 0aeb9c19-c17f-4bfb-956b-bd7fd3e8f05e
+
     - name: Check out repository code
       uses: actions/checkout@v3
 
@@ -21,6 +28,18 @@ jobs:
 
     - name: Run Jest
       run: npm run test-and-cover
+
+    # Make sure you put test kit action after your test execution step
+    - name: Analyze Test and/or Coverage Results
+      uses: runforesight/foresight-test-kit-action@v1
+      if: ${{ always() }}
+      with:
+        api_key: 0aeb9c19-c17f-4bfb-956b-bd7fd3e8f05e
+        test_format: JUNIT
+        test_framework: JEST
+        test_path: <test_results_path_optional>
+        coverage_format: TXT
+        coverage_path: <coverage_results_path_optional>
 
     - name: Generating coverage badges
       uses: jpb06/jest-badges-action@latest
