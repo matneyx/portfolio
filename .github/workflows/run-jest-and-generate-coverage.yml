@@ -38,7 +38,6 @@ jobs:
         test_format: JUNIT
         test_framework: JEST
         test_path: ./jest-junit-results.xml
-        coverage_format: LCOV/TXT
 
     - name: Generating coverage badges
       uses: jpb06/jest-badges-action@latest
