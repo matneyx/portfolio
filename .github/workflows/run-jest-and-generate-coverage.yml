@@ -22,22 +22,6 @@ jobs:
     - name: Run Jest
       run: npm run test-and-cover
 
-    - name: Jest Coverage Comment
-      id: coverageComment
-      uses: MishaKav/jest-coverage-comment@main
-
-    - name: Create the badge
-      if: github.ref == 'refs/heads/master'
-      uses: schneegans/dynamic-badges-action@v1.6.0
-      with:
-        auth: ${{ secrets.JEST_COVERAGE_COMMENT }}
-        gistID: 9971936c552d17eb9f2141f03733c586
-        filename: mx-io-test.json
-        label: Coverage
-        message: ${{ steps.coverageComment.outputs.coverage }}%
-        color: ${{ steps.coverageComment.outputs.color }}
-        namedLogo: jest
-
     - name: Generating coverage badges
       uses: jpb06/jest-badges-action@latest
       with:
