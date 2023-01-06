@@ -52,11 +52,11 @@ export const Header = () => {
          }
        }
        window.addEventListener('load', headerScrolled)
-       document.addEventListener('scroll', headerScrolled);
+       window.addEventListener('scroll', headerScrolled);
 
        return(()=>{
          window.removeEventListener('load', headerScrolled)
-         document.removeEventListener('scroll', headerScrolled);
+         window.removeEventListener('scroll', headerScrolled);
        })
      }
   });
@@ -64,7 +64,7 @@ export const Header = () => {
   /**
    * Adapted from: https://github.com/matneyx/matneyx.github.io/blob/BootstrapMade-DevFolio-Free-Template/index.html#L35
    */
-  return (<StyledHeader ref={headerRef} className="fixed-top">
+  return (<StyledHeader ref={headerRef} data-testid="header" className="fixed-top">
     <Container className='d-flex align-items-center justify-content-between'>
       <Logo className="logo"><a href='index.html'>Dave Matney</a></Logo>
       <NavBar />
