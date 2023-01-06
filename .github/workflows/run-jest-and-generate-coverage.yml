@@ -37,6 +37,7 @@ jobs:
         api_key: 0aeb9c19-c17f-4bfb-956b-bd7fd3e8f05e
         test_format: JUNIT
         test_framework: JEST
+        test_path: ./junit.xml
         coverage_format: LCOV/TXT
 
     - name: Generating coverage badges
