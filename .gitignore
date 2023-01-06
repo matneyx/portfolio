@@ -7,6 +7,7 @@
 
 # testing
 /coverage
+jest-junit-results.xml
 
 # production
 /build
