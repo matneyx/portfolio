@@ -1,4 +1,7 @@
 # About This Site
+[![Known Vulnerabilities](https://snyk.io/test/github/matneyx/matneyx.github.io/badge.svg)](https://snyk.io/test/github/matneyx/matneyx.github.io)
+[![Maintainability](https://api.codeclimate.com/v1/badges/628ab8078ee645b4fa59/maintainability)](https://codeclimate.com/github/matneyx/matneyx.github.io/maintainability)
+
 ![Branches](./badges/coverage-branches.svg)
 ![Functions](./badges/coverage-functions.svg)
 ![Lines](./badges/coverage-lines.svg)
