@@ -6,4 +6,5 @@
   "reporters": [
     "default",
     ["jest-junit", { "outputName": "jest-junit-results.xml"}]
+  ]
 }
