@@ -29,7 +29,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test-and-cover": "jest --coverage  --ci",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "stryker": "stryker run"
   },
   "eslintConfig": {
     "extends": [
@@ -50,8 +51,11 @@
     ]
   },
   "devDependencies": {
+    "@stryker-mutator/core": "^6.3.1",
+    "@stryker-mutator/jest-runner": "^6.3.1",
     "gh-pages": "^4.0.0",
-    "identity-obj-proxy": "^3.0.0"
+    "identity-obj-proxy": "^3.0.0",
+    "stryker-babel-transpiler": "^0.10.1"
   },
   "resolutions": {
     "styled-components": "^5"

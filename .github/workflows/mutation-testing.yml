@@ -1,0 +1,17 @@
+name: Mutation testing
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  website-frontend:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install dependencies
+      run: npm install
+    - name: Mutation testing
+      run: npm run stryker
+      env:
+        STRYKER_DASHBOARD_API_KEY: ${{ secrets.STRYKER_DASHBOARD_API_KEY }}

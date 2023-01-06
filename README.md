@@ -12,6 +12,8 @@
 ![Statements](./badges/coverage-statements.svg)
 ![Jest coverage](./badges/coverage-jest%20coverage.svg)
 
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fmatneyx%2Fmatneyx.github.io%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/matneyx/matneyx.github.io/master)
+
 ## Notable technologies used
 <img height="32" width="32" src="https://cdn.simpleicons.org/javascript" alt="JavaScript" /> <img height="32" width="32" src="https://cdn.simpleicons.org/bootstrap" alt="Bootstrap" /> <img height="32" width="32" src="https://cdn.simpleicons.org/react" alt="React"/> <img height="32" width="32" src="https://cdn.simpleicons.org/createreactapp" alt="Create React App" /> <img height="32" width="32" src="https://cdn.simpleicons.org/styledcomponents" alt="Styled Components" /> <img height="32" width="32" src="https://cdn.simpleicons.org/jest" alt="Jest"/> <img height="32" width="32" src="https://cdn.simpleicons.org/testinglibrary" alt="Testing Library"/> <img height="32" width="32" src="https://cdn.simpleicons.org/github" alt="Github" /> <img height="32" width="32" src="https://cdn.simpleicons.org/githubactions" alt="Github Actions"/>
 
