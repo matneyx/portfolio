@@ -23,6 +23,7 @@
  - [Typed.js](https://mattboldt.github.io/typed.js/)
  - [Jest](https://jestjs.io/)
  - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+ - [Stryker Mutator[(https://stryker-mutator.io/)
  - [Github Pages](https://pages.github.com/)
  - [Github Actions](https://github.com/features/actions)
 
