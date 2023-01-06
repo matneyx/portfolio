@@ -10,6 +10,7 @@
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.3",
     "glightbox": "^3.2.0",
+    "jest-junit": "^15.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
@@ -27,7 +28,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest --coverage",
-    "test-and-cover": "jest --coverage --coverageReporters json-summary",
+    "test-and-cover": "jest --coverage --coverageReporters json-summary --ci --reporters=default --reporters=jest-junit",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

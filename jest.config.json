@@ -3,5 +3,5 @@
   "moduleNameMapper": {
     "\\.(css|sass)$": "identity-obj-proxy"
   },
-  "reporters": ["default"]
+  "reporters": ["default","jest-junit"]
 }
