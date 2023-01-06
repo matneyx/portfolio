@@ -6,5 +6,6 @@
   "reporters": [
     "default",
     ["jest-junit", { "outputName": "jest-junit-results.xml"}]
-  ]
+  ],
+  "coverageReporters": ["json-summary", "lcov"]
 }

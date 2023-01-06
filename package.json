@@ -28,7 +28,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest --coverage",
-    "test-and-cover": "jest --coverage --coverageReporters json-summary --ci --reporters=default --reporters=jest-junit",
+    "test-and-cover": "jest --coverage  --ci",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
