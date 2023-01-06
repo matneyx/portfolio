@@ -39,13 +39,6 @@ jobs:
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
     steps:
-    # Make sure you put workflow kit action on top of all the steps
-    - name: Collect Workflow Telemetry
-      uses: runforesight/foresight-workflow-kit-action@v1
-      if: ${{ always() }}
-      with:
-        api_key: 0aeb9c19-c17f-4bfb-956b-bd7fd3e8f05e
-
     - name: Checkout repository
       uses: actions/checkout@v3
 
