@@ -42,8 +42,11 @@ jobs:
     - name: Compile LCOV report
       run: npm run cover:report
 
-    - name: Combine LCOV Reports
+    - name: Combine LCOV reports
       run: npm run cover:combine
+
+    - name: Combine JUNIT reports
+      run: npm run combine-junit-reports
 
     # Make sure you put test kit action after your test execution step
     - name: Analyze Test and/or Coverage Results
