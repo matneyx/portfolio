@@ -32,8 +32,11 @@
     "eject": "react-scripts eject",
     "stryker": "stryker run",
     "cypress": "cypress open",
-    "cypress-run" : "cypress run",
-    "cypress-start-and-test" : "start-server-and-test start http://localhost:3000 cypress-run"
+    "cypress-run": "cypress run",
+    "cypress-start-and-test": "start-server-and-test start http://localhost:3000 cypress-run",
+    "start-with-coverage": "nyc --silent npm run start",
+    "cover:cypress": "nyc --silent npm run cypress-start-and-test",
+    "cover:report": "nyc report --reporter=lcov --reporter=text"
   },
   "eslintConfig": {
     "extends": [
@@ -55,6 +58,7 @@
   },
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
+    "@cypress/code-coverage": "^3.10.0",
     "@cypress/webpack-preprocessor": "^5.16.1",
     "@stryker-mutator/core": "^6.3.1",
     "@stryker-mutator/jest-runner": "^6.3.1",

@@ -27,9 +27,24 @@ jobs:
       - name: Cypress.io
         uses: cypress-io/github-action@v5.0.4
         with:
-          start: npm start
+          start: npm start-with-coverage
           record: true
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # pass GitHub token to allow accurately detecting a build vs a re-run build
           GITHUB_TOKEN: ${{ secrets.CYPRESS_GITHUB_TOKEN }}
+
+      - name: Compile LCOV report
+        run: npm run cover:report
+
+       # Make sure you put test kit action after your test execution step
+      - name: Analyze Test and/or Coverage Results
+        uses: runforesight/foresight-test-kit-action@v1
+        if: ${{ always() }}
+        with:
+          api_key: 0aeb9c19-c17f-4bfb-956b-bd7fd3e8f05e
+          test_format: JUNIT
+          test_framework: CYPRESS
+          test_path: ./cypress-junit-results.xml
+          coverage_format: LCOV/TXT
+          coverage_path: ./coverage/lcov.info
