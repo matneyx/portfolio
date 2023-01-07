@@ -8,5 +8,6 @@
     ["jest-junit", { "outputName": "jest-junit-results.xml"}]
   ],
   "collectCoverage": true,
+  "coverageDirectory": "./coverage/jest/",
   "coverageReporters": ["json-summary", "lcov"]
 }

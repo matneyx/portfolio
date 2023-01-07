@@ -29,6 +29,9 @@ jobs:
     - name: Run Jest
       run: npm run test-and-cover
 
+    - name: Combine LCOV Reports
+      run: npm run cover:combine
+
     # Make sure you put test kit action after your test execution step
     - name: Analyze Test and/or Coverage Results
       uses: runforesight/foresight-test-kit-action@v1
@@ -39,7 +42,7 @@ jobs:
         test_framework: JEST
         test_path: ./jest-junit-results.xml
         coverage_format: LCOV/TXT
-        coverage_path: ./coverage/lcov.info
+        coverage_path: ./coverage/combined-lcov.info
 
     - name: Generating coverage badges
       uses: jpb06/jest-badges-action@latest

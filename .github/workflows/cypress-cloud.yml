@@ -37,6 +37,9 @@ jobs:
       - name: Compile LCOV report
         run: npm run cover:report
 
+      - name: Combine LCOV Reports
+        run: npm run cover:combine
+
        # Make sure you put test kit action after your test execution step
       - name: Analyze Test and/or Coverage Results
         uses: runforesight/foresight-test-kit-action@v1
@@ -47,4 +50,4 @@ jobs:
           test_framework: CYPRESS
           test_path: ./cypress-junit-results.xml
           coverage_format: LCOV/TXT
-          coverage_path: ./coverage/lcov.info
+          coverage_path: ./coverage/combined-lcov.info
