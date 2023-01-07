@@ -6,10 +6,11 @@
 .pnp.js
 
 # testing
-/coverage
+/.nyc_output
+combined-junit-results.xml
 jest-junit-results.xml
+cypress-junit-results.xml
 junit.xml
-lcov.info
 /cypress/videos
 
 # production
