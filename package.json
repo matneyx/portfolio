@@ -32,8 +32,13 @@
     "eject": "react-scripts eject",
     "stryker": "stryker run",
     "cypress": "cypress open",
-    "cypress-run" : "cypress run",
-    "cypress-start-and-test" : "start-server-and-test start http://localhost:3000 cypress-run"
+    "cypress-run": "cypress run",
+    "cypress-start-and-test": "start-server-and-test start http://localhost:3000 cypress-run",
+    "start-with-coverage": "nyc --silent npm run start",
+    "cover:cypress": "nyc --silent npm run cypress-start-and-test",
+    "cover:report": "nyc report --reporter=lcov --reporter=text",
+    "cover:combine": "./node_modules/.bin/lcov-result-merger './coverage/**/lcov.info' './coverage/combined-lcov.info'",
+    "combine-junit-reports": "jrm ./combined-junit-results.xml \"./cypress-junit-results.xml\" \"./jest-junit-results.xml\""
   },
   "eslintConfig": {
     "extends": [
@@ -55,12 +60,15 @@
   },
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
+    "@cypress/code-coverage": "^3.10.0",
     "@cypress/webpack-preprocessor": "^5.16.1",
     "@stryker-mutator/core": "^6.3.1",
     "@stryker-mutator/jest-runner": "^6.3.1",
     "cypress": "^12.3.0",
     "gh-pages": "^4.0.0",
     "identity-obj-proxy": "^3.0.0",
+    "junit-report-merger": "^4.0.0",
+    "lcov-result-merger": "^4.0.0",
     "start-server-and-test": "^1.15.2",
     "stryker-babel-transpiler": "^0.10.1"
   },
