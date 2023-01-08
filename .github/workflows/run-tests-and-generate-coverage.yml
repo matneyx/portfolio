@@ -38,7 +38,7 @@ jobs:
       run: npm run test-and-cover
 
     - name: Code Climate Format Coverge
-      run: cc-test-reporter format-coverage COVERAGE_FILE ./coverage/jest/lcov.info --input-type lcov --output ./coverage/jest/cc-jest.json
+      run: cc-test-reporter format-coverage ./coverage/jest/lcov.info --input-type lcov --output ./coverage/jest/cc-jest.json
 
     - name: Run Cypress
       uses: cypress-io/github-action@v5.0.4
@@ -51,7 +51,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.CYPRESS_GITHUB_TOKEN }}
 
     - name: Code Climate Format Coverge
-      run: cc-test-reporter format-coverage COVERAGE_FILE ./coverage/cypress/lcov.info --input-type lcov --output ./coverage/cypress/cc-cypress.json
+      run: cc-test-reporter format-coverage ./coverage/cypress/lcov.info --input-type lcov --output ./coverage/cypress/cc-cypress.json
 
     - name: Code Climate Sum Coverage
       run: cc-test-reporter sum-coverage coverage/**/cc-*.json --parts 2
