@@ -27,7 +27,7 @@ jobs:
       run: npm install
 
     - name: Code Climate Setup
-    - uses: amancevice/setup-code-climate@v1
+      uses: amancevice/setup-code-climate@v1
       with:
         cc_test_reporter_id: ${{ secrets.CODECLIMATE_TEST_REPORTER_ID }}
 
