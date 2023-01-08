@@ -2,6 +2,7 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { ChevronDown, MobileNavToggle } from "../BootstrapIcons";
 
+
 describe('ChevronDown', () => {
   test('renders with default props', () => {
     render(<ChevronDown />);
@@ -35,18 +36,20 @@ describe('MobileNavToggle', () => {
 
   test('toggles icon when clicked', () => {
     const handleClick = jest.fn();
+
+    const bsListPathDAttributeValue = 'M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z';
+
+    const bsXPathDAttributeValue = 'M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z'
+
     render(<MobileNavToggle onClick={handleClick} />);
-    expect(screen.getByTestId('mobile-nav-toggle').classList.contains('bi-x')).toBe(false);
-    expect(screen.getByTestId('mobile-nav-toggle').classList.contains('bi-list')).toBe(true);
+    expect(screen.getByTestId('mobile-nav-toggle').querySelector('path')).toHaveAttribute('d', bsListPathDAttributeValue)
 
     fireEvent.click(screen.getByTestId('mobile-nav-toggle'));
 
-    expect(screen.getByTestId('mobile-nav-toggle').classList.contains('bi-x')).toBe(true);
-    expect(screen.getByTestId('mobile-nav-toggle').classList.contains('bi-list')).toBe(false);
+    expect(screen.getByTestId('mobile-nav-toggle').querySelector('path')).toHaveAttribute('d', bsXPathDAttributeValue)
 
     fireEvent.click(screen.getByTestId('mobile-nav-toggle'));
 
-    expect(screen.getByTestId('mobile-nav-toggle').classList.contains('bi-x')).toBe(false);
-    expect(screen.getByTestId('mobile-nav-toggle').classList.contains('bi-list')).toBe(true);
+    expect(screen.getByTestId('mobile-nav-toggle').querySelector('path')).toHaveAttribute('d', bsListPathDAttributeValue)
   })
 });
