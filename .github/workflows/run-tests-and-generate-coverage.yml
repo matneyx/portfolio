@@ -54,7 +54,7 @@ jobs:
       run: cc-test-reporter format-coverage COVERAGE_FILE ./coverage/cypress/lcov.info --input-type lcov --output ./coverage/cypress/cc-cypress.json
 
     - name: Code Climate Sum Coverage
-      run: cc-test-reporter sum-coverage --parts 2
+      run: cc-test-reporter sum-coverage coverage/**/cc-*.json --parts 2
 
     - name: Code Climate Upload Coverage
       run: cc-test-reporter upload-coverage
