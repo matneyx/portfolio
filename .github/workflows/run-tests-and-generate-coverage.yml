@@ -26,8 +26,19 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Code Climate Setup
+    - uses: amancevice/setup-code-climate@v1
+      with:
+        cc_test_reporter_id: ${{ secrets.CODECLIMATE_TEST_REPORTER_ID }}
+
+    - name: Code Climate Before Build
+      run: cc-test-reporter before-build
+
     - name: Run Jest
       run: npm run test-and-cover
+
+    - name: Code Climate Format Coverge
+      run: cc-test-reporter format-coverage COVERAGE_FILE ./coverage/jest/lcov.info --input-type lcov --output ./coverage/jest/cc-jest.json
 
     - name: Run Cypress
       uses: cypress-io/github-action@v5.0.4
@@ -39,6 +50,15 @@ jobs:
         # pass GitHub token to allow accurately detecting a build vs a re-run build
         GITHUB_TOKEN: ${{ secrets.CYPRESS_GITHUB_TOKEN }}
 
+    - name: Code Climate Format Coverge
+      run: cc-test-reporter format-coverage COVERAGE_FILE ./coverage/cypress/lcov.info --input-type lcov --output ./coverage/cypress/cc-cypress.json
+
+    - name: Code Climate Sum Coverage
+      run: cc-test-reporter sum-coverage --parts 2
+
+    - name: Code Climate Upload Coverage
+      run: cc-test-reporter upload-coverage
+
     - name: Compile LCOV report
       run: npm run cover:report
 
@@ -47,6 +67,8 @@ jobs:
 
     - name: Combine JUNIT reports
       run: npm run combine-junit-reports
+
+
 
     # Make sure you put test kit action after your test execution step
     - name: Analyze Test and/or Coverage Results
