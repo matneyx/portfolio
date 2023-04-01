@@ -19,7 +19,7 @@
     "react-scroll": "^1.8.9",
     "styled-components": "^5.3.6",
     "swiper": "^8.4.5",
-    "typed.js": "^2.0.12",
+    "typed.js": "^2.0.132",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
