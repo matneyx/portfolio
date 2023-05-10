@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+/** Vendor CSS Files */
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/dist/css/bootstrap-icons.css';
+import 'glightbox/dist/css/glightbox.min.css';
+import 'swiper/swiper-bundle.min.css'
+
+/** Template Main CSS Files */
 import './index.css';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals';
+
+import { Header } from './components/Header';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Header/>
   </React.StrictMode>
 );
 
